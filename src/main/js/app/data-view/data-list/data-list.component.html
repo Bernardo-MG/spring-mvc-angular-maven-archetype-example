@@ -1,0 +1,8 @@
+<mat-list class="mat-elevation-z8">
+  <a *ngFor="let d of data;let index=index">
+    <mat-list-item class="selection-item">
+      {{d.name}}
+      <mat-divider *ngIf="index < (data.length-1)"></mat-divider>
+    </mat-list-item>
+  </a>
+</mat-list>

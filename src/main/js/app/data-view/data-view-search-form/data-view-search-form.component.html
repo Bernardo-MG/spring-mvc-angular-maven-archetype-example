@@ -1,0 +1,9 @@
+<div>
+    <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Search criteria</mat-label>
+            <input matInput (keyup.enter)="handleClick(criteria.value)" #criteria type="search">
+        </mat-form-field>
+        <button mat-button (click)="handleClick(criteria.value)">Search</button>
+    </div>
+</div>

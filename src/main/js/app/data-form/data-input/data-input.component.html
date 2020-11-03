@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Input Form</h1>
+    <form (ngSubmit)="onSubmit()" #dataForm="ngForm">
+        <div class="form-group">
+            <mat-form-field class="example-full-width">
+                <mat-label for="name">Name</mat-label>
+                <input matInput type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"
+                    #name="ngModel">
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                    Name is required
+                </div>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button type="submit" [disabled]="!dataForm.form.valid">Submit</button>
+    </form>
+</div>
